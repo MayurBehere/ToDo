@@ -1,13 +1,30 @@
 import React from "react";
+import axios from "axios";
 import { AiFillEdit } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
-const ToDo = ({ text }) => {
+import { baseURL } from "../utils/constant"; 
+
+const ToDo = ({ text, id, setUpdateUI }) => {
+  const deleteToDo = () => {
+    axios
+      .delete(`${baseURL}/delete/${id}`)
+      .then((res) => {
+        console.log(res.data);
+        setUpdateUI((prev) => !prev);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div className="toDo">
       {text}
       <div className="icons">
         <AiFillEdit className="icon" />
-        <RxCross1 className="icon" />
+        <div onClick={deleteToDo}>
+          <RxCross1 className="icon" />
+        </div>
       </div>
     </div>
   );

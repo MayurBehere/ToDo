@@ -42,34 +42,6 @@ const App = () => {
             type="text"
             placeholder="Add a task..."
           />
-          <button onClick={saveToDo}>
-            Add
-          </button>
-        </div>
-
-        <div className="list">
-          {toDos.map((el) => (
-            <ToDo key={el._id} text={el.toDo} />
-          ))}
-        </div>
-      </div>
-    </main>
-  );
-
-
-
-  return (
-    <main>
-      <div className="container">
-        <h1 className="title"> ToDo App</h1>
-
-        <div className="input_holder">
-          <input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            type="text"
-            placeholder="Add a task..."
-          />
           <button  onClick={saveToDo}>
             Add
           </button>
@@ -77,7 +49,7 @@ const App = () => {
 
         <div className="list">
           {toDos.map((el) => (
-            <ToDo key={el._id} text={el.toDo} />
+            <ToDo key={el._id} text={el.toDo} id={el._id} setUpdateUI={setUpdateUI} />
           ))}
         </div>
       </div>
