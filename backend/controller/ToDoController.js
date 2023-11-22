@@ -27,7 +27,6 @@ module.exports.saveToDos = (req, res) => {
 
 // Update a ToDo item in the database
 module.exports.updateToDos = (req, res) => {
-  // Extract the 'toDO' property from the request body
   const { toDo } = req.body;
   const { id } = req.params;
   ToDoModel.findByIdAndUpdate(id, { toDo })
