@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import { AiFillEdit } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import { baseURL } from "../utils/constant"; 
 
@@ -21,7 +20,6 @@ const ToDo = ({ text, id, setUpdateUI }) => {
     <div className="toDo">
       {text}
       <div className="icons">
-        <AiFillEdit className="icon" />
         <div onClick={deleteToDo}>
           <RxCross1 className="icon" />
         </div>

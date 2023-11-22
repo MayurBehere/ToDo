@@ -53,6 +53,7 @@ const App = () => {
           ))}
         </div>
       </div>
+    
     </main>
   );
 };
