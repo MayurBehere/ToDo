@@ -21,6 +21,7 @@ body {
 }
 
 .title {
+  padding-top: 5rem;
   text-align: center;
   font-size: 3rem;
 }
@@ -30,6 +31,7 @@ body {
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
+
 }
 
 input,
@@ -39,6 +41,7 @@ button {
   color: #fff;
   outline: none;
   border: none;
+  border-radius: 15px;
 }
 
 input {
@@ -51,8 +54,11 @@ input::placeholder {
 
 button:hover {
   cursor: pointer;
-  background-color: #4d4d4d;
+  background-color: green;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
+
 
 .list {
   margin-top: 20px;
